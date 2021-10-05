@@ -1,7 +1,6 @@
 * {
     /* outline: 1px solid #565656; */
     list-style-type: none;
-    font-family: Helvetica;
 }
 
 body {
@@ -15,25 +14,9 @@ body {
 
 .menu {
     width: 270px;
-    height: 1117px;
+    height: 700px;
     background-color: #000;
     color: #ffffff;
-}
-
-.menu ul {
-    font-size: 14px;
-    color: #FFFFFF;
-    line-height: 22px;
-}
-
-.menu ul li {
-    padding: 5px 0px;
-}
-
-.menu-decoration {
-    font-size: 12px;
-    color: #878787;
-    line-height: 18px;
 }
 
 .menu-logo {
@@ -73,10 +56,11 @@ body {
     width: 40px;
     height: 40px;
     background-color: #FFC200;
-    border-radius: 10px;
 }
 
 .header-img-2 {
+    vertical-align: center;
+    ;
     margin: 0 10px 0 10px;
     align-items: center;
     background: #EAEAEA;
@@ -105,6 +89,11 @@ body {
     margin-right: 25px;
 }
 
+.menu div p {
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
 .main-title {
     opacity: 0.5;
     font-family: Helvetica;
@@ -116,8 +105,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #202020;
-    padding: 0px 0px;
 }
 
 .user-info {
@@ -125,40 +112,15 @@ body {
     margin-right: 40px;
 }
 
-.more {
-    font-size: 30px;
-}
-
 .menu-tasks {
-    padding: 15px 0 30px 40px;
+    padding-left: 20px;
     display: flex;
     line-height: 0px;
 }
 
 .menu-complited-tasks {
     display: list-item;
-    margin-right: 10px;
-}
-
-.tasks-text {
-    opacity: 0.5;
-    font-size: 12px;
-    color: #FFFFFF;
-}
-
-.name {
-    font-size: 14px;
-    color: #FFFFFF;
-}
-
-.profesional {
-    font-size: 12px;
-    color: #9B9B9B;
-}
-
-.tasks {
-    font-size: 20px;
-    color: #FFFFFF;
+    margin-right: 20px;
 }
 
 .header {
@@ -194,8 +156,8 @@ body {
 }
 
 .num {
-    margin-left: 10px;
-    padding: 2px 6px 2px 6px;
+    padding: 2px 5px 2px 5px;
+    ;
     color: #131313;
     background-color: #FFC200;
     border-radius: 50%;
@@ -242,9 +204,10 @@ body {
     width: 12px;
     height: 9px;
     padding: 15px;
-    /* border: 1px solid red; */
+    border: 1px solid #red;
     border-radius: 50%;
     margin: 0 20px 0 20px;
+    ;
 }
 
 .color-send {
@@ -263,7 +226,7 @@ body {
 
 .main-li-text {
     width: 461px;
-    padding: 10px;
+    padding: 0px;
     font-family: Helvetica;
     font-size: 16px;
     color: #131313;
