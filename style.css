@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-.wraper {
+.pagess {
     display: flex;
 }
 
@@ -36,17 +36,17 @@ body {
     line-height: 18px;
 }
 
-.menu-logo {
+.m-logo {
     display: flex;
     height: 84px;
     align-items: center;
 }
 
-.img-1 {
+.picture-1 {
     margin-left: 30px;
 }
 
-.img-2 {
+.picture-2 {
     margin-right: 20px;
 }
 
@@ -77,7 +77,7 @@ body {
 }
 
 .header-img-2 {
-    margin: 0 10px 0 10px;
+    margin: 0 10px 0 8px;
     align-items: center;
     background: #EAEAEA;
     border-radius: 15px;
@@ -96,7 +96,7 @@ body {
     color: #131313;
 }
 
-.menu-logo p {
+.m-logo p {
     margin: 0 82px 0 13px;
 }
 
