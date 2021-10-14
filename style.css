@@ -36,12 +36,6 @@ body {
     line-height: 18px;
 }
 
-.m-logo {
-    display: flex;
-    height: 84px;
-    align-items: center;
-}
-
 .picture-1 {
     margin-left: 30px;
 }
@@ -96,8 +90,28 @@ body {
     color: #131313;
 }
 
+.m-logo {
+    display: flex;
+    height: 84px;
+    align-items: center;
+}
+
 .m-logo p {
-    margin: 0 82px 0 13px;
+    margin: 0 82px 0 60px;
+}
+
+.m-logo p::before {
+    content: url(Logo@3x.svg);
+    position: relative;
+    top: 22px;
+    left: -35px;
+}
+
+.m-logo p::after {
+    content: url(Search@3x.svg);
+    position: relative;
+    top: -18px;
+    left: 145px;
 }
 
 .logo-img {
@@ -179,18 +193,20 @@ body {
 }
 
 .menu-header {
+    height: 47px;
     opacity: 1;
     font-family: Helvetica;
     font-size: 16px;
     color: #131313;
     background-color: #ffffff;
-    margin-top: -25px;
+    margin: -25px 0 0 0;
     padding: 1px;
 }
 
 .activ {
-    padding-bottom: 10px;
+    padding-bottom: 14px;
     border-bottom: 2px solid #FFC200;
+    color: #131313
 }
 
 .num {
@@ -238,12 +254,26 @@ body {
     align-items: center;
 }
 
+
+/* .my-upload:before {
+    content: "";
+    position: absolute;
+    background-image: url(3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    left: 235px;
+    border-radius: 50%;
+    padding: 12px 12px 12px 12px;
+    background-color: #E3EFFF;
+    width: 14px;
+    height: 14px;
+} */
+
 .main-li-message {
-    width: 12px;
-    height: 9px;
     padding: 15px;
     /* border: 1px solid red; */
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin: 0 20px 0 20px;
 }
 
@@ -252,13 +282,29 @@ body {
 }
 
 .color_mess {
-    background-color: #FFF8DD;
-    height: 12px;
+    /* background-color: #FFF8DD; */
+}
+
+.color_mess::before {
+    content: url(2.png);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #E3EFFF;
+    border-radius: 50%;
 }
 
 .color_upload {
-    background-color: #E3EFFF;
-    height: 12px;
+    /* height: 12px;
+    width: 14px; */
+    /* background-image: url(3.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+    padding: 20px;
 }
 
 .main-li-text {
