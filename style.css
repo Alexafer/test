@@ -299,9 +299,9 @@ height: 48px;
 } */
 
 .main-li-message {
-    padding: 15px;
+    padding: 15px 18px 15px 18px;
     /* border: 1px solid red; */
-    /* border-radius: 50%; */
+    border-radius: 50%;
     margin: 0 20px 0 20px;
 }
 
@@ -310,7 +310,12 @@ height: 48px;
 }
 
 .color_mess {
-    /* background-color: #FFF8DD; */
+    background-color: #FFF8DD;
+}
+
+.main-li-message img {
+    width: 13px;
+    height: 13px;
 }
 
 
@@ -326,14 +331,9 @@ height: 48px;
 } */
 
 .color_upload {
-    /* height: 12px;
-    width: 14px; */
-    /* background-image: url(3.png); */
     background-repeat: no-repeat;
     background-position: center;
-    width: 14px;
-    height: 14px;
-    padding: 20px;
+    background-color: #E3EFFF;
 }
 
 .main-li-text {
