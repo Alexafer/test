@@ -123,6 +123,7 @@ body {
 .logo-img {
     border-radius: 50%;
     margin-right: 25px;
+    margin-left: 30px;
 }
 
 .main-title {
@@ -138,40 +139,36 @@ body {
     justify-content: center;
     background: #202020;
     padding: 0px 0px;
-}
-
-.user-info {
-    line-height: 0px;
-    margin-right: 0px;
-    margin-left: 30px;
     height: 80px;
 }
 
-.user-info::before {
+.user-info {
+    align-items: center;
+    line-height: 0px;
+    margin: 0px;
+    /* height: 80px; */
+}
+
+.tochky {
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+/* .user-info::before {
     content: "";
     position: absolute;
     top: 108px;
     left: 30px;
     background-image: url(logo.jpg);
-    /* background-position-y: center; */
-    background-size: contain;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-}
+background-size: contain;
+border-radius: 50%;
+width: 48px;
+height: 48px;
 
-.user-info::after {
-    content: "...";
-    /* position: relative;
-    top: 108px;
-    left: 30px; */
-    font-size: 30px;
-    line-height: 10px;
-    border-radius: 50%;
-    background-color: red;
-    width: 58px;
-    height: 48px;
 }
+*/
 
 .menu-tasks {
     padding: 15px 0 30px 30px;
