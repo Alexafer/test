@@ -10,13 +10,13 @@ let element = document.querySelector('.menu-complited-tasks'),
     message = "Are you sure you want to change the number of tasks?";
 
 element.onclick = function() {
-    if (confirm(message) && numTaskOpen > 0) {
+    if (numTaskOpen == 0) {
+        alert("Not have open task!");
+    } else if (confirm(message) && numTaskOpen > 0) {
         numTaskComplited = numTaskComplited + 1;
         tasksComplited.textContent = numTaskComplited;
         numTaskOpen = numTaskOpen - 1;
         tasksOpen.textContent = numTaskOpen;
-    } else if (numTaskOpen == 0) {
-        alert("Not have open task!");
     }
 }
 let res = document.querySelector('.num');
