@@ -119,7 +119,7 @@
             else if (confirm('Are you sure you want to change the number of tasks?') && this.openTasks > 0){
                 this.compliTask = this.compliTask + 1
                 this.openTasks = this.openTasks - 1;
-        }
+            }
         },
         imgFunction(numImage){
             return require('./assets/' + numImage + '.jpg');
