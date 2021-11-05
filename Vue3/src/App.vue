@@ -109,6 +109,12 @@
            openTasks: 11,
            collectionImg: ["image_1", "image_2", "image_3", "image_4"],
            notification: 3,
+           message: [
+             {id: 1, title: 'quam dicta, corporis atque amet iure veritatis, repellat, molestiae delectus sequi quos aliquid aperiam nemo.'},
+             {id: 2, title: 'olestiae delectus sequi quos aliquid aperiam nemo.'},
+             {id: 3, title: 'atque amet iure veritatis, repellat, molestiae delectus sequi quos aliquid aperiam nemo.'},
+             {id: 3, title: 'quisquam dicta, corporis atque amet iure veritatis, repellat, molestiae delectus sequi quos aliquid aperiam nemo. '}
+           ]
         }
     },
     methods: {
