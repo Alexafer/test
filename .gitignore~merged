@@ -1,0 +1,28 @@
+.DS_Store
+node_modules
+/dist
+<<<<<<< HEAD
+/Original
+/test_lern
+=======
+
+
+>>>>>>> 5b4d02b65af0a691c6bbbdb2c9669d1fb0adddff
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
