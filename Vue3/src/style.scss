@@ -14,7 +14,7 @@ body {
 }
 
 .menu {
-    width: 270px;
+    min-width: 270px;
     height: 1117px;
     background-color: #000;
     color: #ffffff;
@@ -131,6 +131,7 @@ body {
     font-family: Helvetica;
     font-size: 14px;
     color: #131313;
+    padding: 0;
 }
 
 .menu-user {
@@ -205,6 +206,8 @@ height: 48px;
 .tasks {
     font-size: 20px;
     color: #FFFFFF;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 .header {
@@ -270,7 +273,7 @@ height: 48px;
 
 .main {
     margin: 30px auto 30px auto;
-    max-width: 730px;
+    max-width: 670px;
     background-color: #ffffff;
     padding: 30px;
 }
@@ -343,12 +346,12 @@ height: 48px;
 
 .main-li-text {
     width: 461px;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
     font-family: Helvetica;
     font-size: 16px;
     color: #131313;
     line-height: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .main-li-text img {
