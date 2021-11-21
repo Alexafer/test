@@ -3,7 +3,7 @@
     <SideBar :user1="user" @calcOpenTask="taskUpdate"/>
     <div class="header">
       <Header />
-      <router-view  :fMess1="fMessages" @notificationIndex="notificationIn" />
+      <router-view  :fMess1="fMessages" @notificationIndex="notificationIn"></router-view>
     </div>
   </div>
 </template>
