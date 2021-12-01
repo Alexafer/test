@@ -7,7 +7,7 @@
     .user-info
       p.name {{ `${user1.firstName} ${user1.lastName}` }}
       br
-      p.profesional {{ user1.professional }}
+      p.profesional {{ user1.position }}
     img.tochky(src="@/assets/images.png" width="20" height="20" alt="")
   .menu-tasks
     .menu-complited-tasks(v-on:click="openPopap()")

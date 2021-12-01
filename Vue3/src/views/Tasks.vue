@@ -1,44 +1,108 @@
-<template lang="pug">
-.main
-  p.main-title TODAY
-  ul
-    div(v-for="fMessage in fMess1" :key="fMessage.id")
-      li.main-li(v-if="fMessage.standart === 1")
-        span.main-li-message(:class="fMessage.spanСlas")
-          img(:src="require('@/assets/Icon@3x.svg')" alt="")
-        p.main-li-text {{ fMessage.text }}
-        p.main-time {{ fMessage.time }}
-      li.main-li(v-if="fMessage.standart === 2")
-        span.main-li-message(:class="fMessage.spanСlas")
-          img(:src="require('@/assets/1.png')" alt="")
-        p.main-li-text {{ fMessage.text }}
-        p.main-time {{ fMessage.time }}
-      li.main-li(v-if="fMessage.standart === 3")
-        p.main-li-text.my-write {{ fMessage.text }}
-      li.main-li(v-if="fMessage.standart === 4")
-        span.main-li-message(:class="fMessage.spanСlas")
-          img(:src="require('@/assets/3.png')" alt="")
-        p.main-li-text
-          | {{ fMessage.text }}
-          img(v-for="(item, index) in fMessage.collectionImg" :key="index" v-on:click="notificFunction(index)" :src="require('@/assets/' + item + '.jpg')" width="100" height="100" alt=" ")
-        p.main-time {{ fMessage.time }}
-  div
-  </template>
-<script lang="ts">
+<template>
+  <div class="main">
+    <p class="main-title">TODAY</p>
+    <span class="center">
+    <input placeholder="Назване здачи" type="text" v-model="newTask.title" required="required" />
+    <input placeholder="Описание здачи" type="text" v-model="newTask.text" required="required" />
+    <input placeholder="Дедлайн" type="date" v-model="newTask.time"/>
+    <button @click="addTask()">Добавить</button></span>
+    <ul>
+      <li class="main-li" v-for="(Tasks, index) in arrayTasks" :key="Tasks.id">
+        <span ><p class="main-li-title" v-bind:class="{blink: isActive}"><b>{{ Tasks.title }}</b></p>
+        <p class="main-li-text1">{{ Tasks.text }}</p>
+        </span>
+        <p class="main-time">{{ Tasks.time }}</p>
+        <button @click="arrayTasks.splice(index, 1)">Удалить</button>
+      </li>
+    </ul>
+    <div></div>
+  </div>
+</template>
+<script lang="">
 import {defineComponent} from 'vue';
-export default defineComponent ({
+export default defineComponent({
   name: 'Tasks',
-  props: {
-    fMess1: {
-      type: Array,
-      required: true
-    }
+  data() {
+    return {
+      isActive: false,
+      newTask: {
+        title: '',
+        text: '',
+        time: ''
+      },
+      arrayTasks: [
+        {
+          title: 'Ознакомиться с основными хуками жизненного цикла компонента',
+          time: '8:40 PM',
+          text: 'Экземпляр Vue beforeCreate, created beforMount, mounted beforeUpdate, updated beforeUnmount, unmounted',
+        },
+        {
+          title: 'Что такое DRY, DIE, KISS, SOLID, YAGNI',
+          time: '7:32 PM',
+          text: 'Термины dry, die, kiss, solid, yagni в прогаммировании. Что такое DRY, KISS, SOLID, YAGNI, DIE и в чем заключаются эти подходы',
+        },
+      ],
+    };
   },
   methods: {
-    notificFunction(index: number) {
-      this.$emit('notificationIndex', index);
+    addTask() {
+      if (!this.newTask.text || !this.newTask.title) {
+        return false;
+      }
+      this.arrayTasks.push(this.newTask);
+      this.newTask = {};
+      this.isActive = true;
+    setTimeout(() => this.isActive = false, 2000);
     },
+  },
+  computed: {
+    fgo(){
+      console.log(test);
+    }
   },
 });
 </script>
-<style lang=""></style>
+<style lang="scss">
+.main-li-text1 {
+  width: 451px;
+  padding: 0px 10px 0px 10px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #131313;
+  line-height: 20px;
+  // margin-right: 30px;
+  margin-left: 30px;
+}
+.main-li-title {
+  padding: 0px 10px 0px 10px;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: #131313;
+  line-height: 20px;
+  margin-right: 30px;
+  // margin-left: 30px;
+}
+.center {
+  align-items: center;
+  margin-left: 70px;
+  margin-right: 30px;
+}
+.blink {
+	-webkit-animation: blink 1s linear infinite; 
+	animation: blink 2s linear infinite; 
+	color: #131313; 
+}
+
+@-webkit-keyframes blink { 
+	0% { color: #131313; }
+	50% { color: #FBB; }
+	100% { color: #131313; }
+}
+
+@keyframes blink {  
+	0% { color: #131313; }
+	50% { color: #FBB; }
+	100% { color: #131313; } 
+}
+</style>
+

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-// import Tasks from '../views/Tasks.vue'
+import Tasks from '../views/Tasks.vue'
 
 const routes: Array<RouteRecordRaw> = [
   // жесткая загрузка
@@ -8,11 +8,11 @@ const routes: Array<RouteRecordRaw> = [
   //   name: 'Tasks',
   //   component: Tasks
   // },
-  // ajax загрузка 
+  // ajax загрузка
   {
     path: '/',
     name: 'Tasks',
-    component: () => import('../views/Tasks.vue')
+    component: Tasks
   },
   {
     path: '/Activity',
@@ -38,7 +38,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Files.vue')
   },
   {
-    path: '/:pathMatch(.*)*',
+     path: '/:NotFound(.*)*',  //'/:pathMatch(.*)*'
     name: 'PageNotFound',
     component: () => import('../views/errors/Page404.vue')
   }
@@ -48,6 +48,14 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
+
+// router.beforeEach((to, from) => {
+//   console.log(to);
+//   console.log(from);
+//   if (to.path === '/Kanban1') {
+//     router.push('456465465')
+//   }
+// })
 
 export default router

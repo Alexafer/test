@@ -2,7 +2,7 @@
   <div class="pagess">
     <SideBar :user1="user" @calcOpenTask="taskUpdate"/>
     <div class="header">
-      <Header />
+      <Header></Header>
       <router-view  :fMess1="fMessages" @notificationIndex="notificationIn"></router-view>
     </div>
   </div>
