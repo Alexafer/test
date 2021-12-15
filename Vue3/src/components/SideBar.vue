@@ -3,12 +3,12 @@
   .m-logo
     p PROJECTUS
   .menu-user
-    img.logo-img(src="@/assets/logo.jpg" width="48" height="48" alt=" ")
+    img.logo-img(src="@/assets/icons/logo.jpg" width="48" height="48" alt=" ")
     .user-info
       p.name {{ `${user1.firstName} ${user1.lastName}` }}
       br
-      p.profesional {{ user1.position }}
-    img.tochky(src="@/assets/images.png" width="20" height="20" alt="")
+      p.profesional {{ user1.position }}{{$store.state.counter}}
+    img.tochky(src="@/assets/icons/images.png" width="20" height="20" alt="")
   .menu-tasks
     .menu-complited-tasks(v-on:click="openPopap()")
       p.tasks.tasks-complited {{ user1.task.complitedTask }}
@@ -28,6 +28,7 @@
 </template>
 <script lang="">
 import {defineComponent} from 'vue';
+// import { mapState } from 'vuex';
 export default defineComponent({
   name: 'SadeBar',
   props: {
@@ -53,6 +54,9 @@ export default defineComponent({
         })
     }
   },
+  // computed: {
+  //   ...mapState(["counter", "counter2"])
+  // }
 });
 </script>
 <style lang="scss"></style>

@@ -1,16 +1,16 @@
 <template lang="">
   <div class="pagess">
-    <SideBar :user1="user" @calcOpenTask="taskUpdate"/>
+    <SideBar :user1="user" @calcOpenTask="taskUpdate" />
     <div class="header">
       <Header></Header>
-      <router-view  :fMess1="fMessages" @notificationIndex="notificationIn"></router-view>
+      <router-view :fMess1="fMessages" @notificationIndex="notificationIn"></router-view>
     </div>
   </div>
 </template>
 <script lang="ts">
 import {IUser} from '@/types/user';
 import SideBar from '@/components/SideBar.vue';
-import Header  from '@/components/Header.vue';
+import Header from '@/components/Header.vue';
 import Content from '@/components/Content.vue';
 import {defineComponent} from 'vue';
 export default defineComponent({

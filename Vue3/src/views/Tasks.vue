@@ -1,24 +1,22 @@
-<template>
-  <div class="main">
-    <p class="main-title">TODAY</p>
-    <span class="center">
-    <input placeholder="Назване здачи" type="text" v-model="newTask.title" required="required" />
-    <input placeholder="Описание здачи" type="text" v-model="newTask.text" required="required" />
-    <input placeholder="Дедлайн" type="date" v-model="newTask.time"/>
-    <button @click="addTask()">Добавить</button></span>
-    <ul>
-      <li class="main-li" v-for="(Tasks, index) in arrayTasks" :key="Tasks.id">
-        <span ><p class="main-li-title" v-bind:class="{blink: isActive}"><b>{{ Tasks.title }}</b></p>
-        <p class="main-li-text1">{{ Tasks.text }}</p>
-        </span>
-        <p class="main-time">{{ Tasks.time }}</p>
-        <button @click="arrayTasks.splice(index, 1)">Удалить</button>
-      </li>
-    </ul>
-    <div></div>
-  </div>
+<template lang="pug">
+.main
+  p.main-title TODAY
+  span.center
+    input(placeholder="Назване здачи" type="text" v-model="newTask.title" required="required")
+    input(placeholder="Описание здачи" type="text" v-model="newTask.text" required="required")
+    input(placeholder="Дедлайн" type="date" v-model="newTask.time")
+    button(@click="addTask()") Добавить
+  ul
+    li.main-li(v-for="(Tasks, index) in arrayTasks" :key="Tasks.id")
+      span
+        p.main-li-title(v-bind:class="{blink: isActive}")
+          b {{ Tasks.title }}
+        p.main-li-text1 {{ Tasks.text }}
+      p.main-time {{ Tasks.time }}
+      button(@click="arrayTasks.splice(index, 1)") Удалить
+  div
 </template>
-<script lang="">
+<script lang="ts">
 import {defineComponent} from 'vue';
 export default defineComponent({
   name: 'Tasks',
@@ -44,21 +42,21 @@ export default defineComponent({
       ],
     };
   },
-  methods: {
-    addTask() {
-      if (!this.newTask.text || !this.newTask.title) {
-        return false;
-      }
-      this.arrayTasks.push(this.newTask);
-      this.newTask = {};
-      this.isActive = true;
-    setTimeout(() => this.isActive = false, 2000);
-    },
-  },
+  // methods: {
+  //   addTask() {
+  //     if (!this.newTask.text || !this.newTask.title) {
+  //       return false;
+  //     }
+  //     this.arrayTasks.push(this.newTask);
+  //     this.newTask = {};
+  //     this.isActive = true;
+  //   setTimeout(() => this.isActive = false, 2000);
+  //   },4
+  // },
   computed: {
-    fgo(){
-      console.log(test);
-    }
+    // fgo(){
+    //   console.log(test);
+    // }
   },
 });
 </script>

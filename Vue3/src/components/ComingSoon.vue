@@ -10,6 +10,8 @@ export default defineComponent({
     name: 'ComingSoon'
 })
 </script>
-<style lang="">
-    
+<style lang="scss">
+    H2{
+    color: $color;
+    } 
 </style>

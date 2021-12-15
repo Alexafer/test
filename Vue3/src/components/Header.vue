@@ -2,25 +2,25 @@
 div
   .heder-menu
     .header-block-1
-      img.header-img(src="@/assets/Shapes@2x.png " alt=" ")
+      img.header-img(src="@/assets/icons/Shapes@2x.png " alt=" ")
       p Website Redesign
-      img.header-img-2(src="@/assets/tochky.jpg" width="20" height="20" alt="")
+      img.header-img-2(src="@/assets/icons/tochky.jpg" width="20" height="20" alt="")
     .header-block-2
       ul.header-users-icons
         li
           a(href=" ")
-            img.us-icon(src="@/assets/logo_1.jpg " alt=" ")
+            img.us-icon(src="@/assets/icons/logo_1.jpg " alt=" ")
         li
           a(href=" ")
-            img.us-icon(src="@/assets/logo_2.jpg " alt=" ")
+            img.us-icon(src="@/assets/icons/logo_2.jpg " alt=" ")
         li
           a(href=" ")
-            img.us-icon(src="@/assets/logo_3.jpg " alt=" ")
+            img.us-icon(src="@/assets/icons/logo_3.jpg " alt=" ")
         li
           a.share(href=" ") Share
         li.chat
           a(href=" ")
-            img(src="@/assets/Shape@1x.svg" alt="")
+            img(src="@/assets/icons/Shape@1x.svg" alt="")
             | Chat
   .menu-header
     ul
