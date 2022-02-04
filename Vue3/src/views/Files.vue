@@ -1,16 +1,12 @@
-<template lang="">
-  <div class="main">
-    <coming-soon>
-      <template #C2>
-        Code the proected
-      </template>
-      <template #C1>
-        Code the proected
-      </template>
-    </coming-soon>
-  </div>
+<template lang="pug">
+.main
+  coming-soon
+    template(#c2="")
+      | Code the proected
+    template(#c1="")
+      | Code the proected
 </template>
-<script lang="">
+<script lang="ts">
 import ComingSoon from '@/components/ComingSoon.vue';
 export default ({
   name: 'Files',

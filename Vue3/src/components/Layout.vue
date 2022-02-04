@@ -1,24 +1,22 @@
-<template lang="">
-  <div class="pagess">
-    <SideBar :user1="user" @calcOpenTask="taskUpdate" />
-    <div class="header">
-      <Header></Header>
-      <router-view :fMess1="fMessages" @notificationIndex="notificationIn"></router-view>
-    </div>
-  </div>
+<template lang="pug">
+.pagess
+  SideBar(:user1="user" @calcOpenTask="taskUpdate")
+  .header
+    Header
+    router-view(:fMess1="fMessages" @notificationIndex="notificationIn")
 </template>
 <script lang="ts">
 import {IUser} from '@/types/user';
-import SideBar from '@/components/SideBar.vue';
-import Header from '@/components/Header.vue';
-import Content from '@/components/Content.vue';
+// import SideBar from '@/components/SideBar.vue';
+// import Header from '@/components/Header.vue';
+// import Content from '@/components/Content.vue';
 import {defineComponent} from 'vue';
 export default defineComponent({
   name: 'Layout',
   components: {
-    SideBar,
-    Header,
-    Content,
+    // SideBar,
+    // Header,
+    // Content,
   },
   data() {
     return {

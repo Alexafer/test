@@ -4,7 +4,7 @@ div
     .header-block-1
       img.header-img(src="@/assets/icons/Shapes@2x.png " alt=" ")
       p Website Redesign
-      img.header-img-2(src="@/assets/icons/tochky.jpg" width="20" height="20" alt="")
+      .header-img-2
     .header-block-2
       ul.header-users-icons
         li
@@ -25,19 +25,19 @@ div
   .menu-header
     ul
       li
-        router-link(:to="{name:'Tasks'}" active-class="activ") Tasks
+        router-link(:to="{name: 'Tasks'}" active-class="activ") Tasks
       li
-        router-link(:to="{name:'Kanban'}" active-class="activ") Kanban
+        router-link(:to="{name: 'Kanban'}" active-class="activ") Kanban
       li
-        router-link(:to="{name:'Activity'}" active-class="activ") Activity
+        router-link(:to="{name: 'Activity'}" active-class="activ") Activity
       li
-        router-link(:to="{name:'Calendar'}" active-class="activ" href=" ") Calendar
+        router-link(:to="{name: 'Calendar'}" active-class="activ" href=" ") Calendar
       li
-        router-link(:to="{name:'Files'}" active-class="activ" href=" ") Files
+        router-link(:to="{name: 'Files'}" active-class="activ" href=" ") Files
 </template>
-<script lang=''>
+<script lang="ts">
 export default {
-  name: 'Header'
+  name: 'Header',
 };
 </script>
 <style lang=""></style>

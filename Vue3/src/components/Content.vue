@@ -30,7 +30,7 @@ export default defineComponent ({
   name: 'Content',
   props: {
     fMess1: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -41,4 +41,18 @@ export default defineComponent ({
   },
 });
 </script>
-<style lang=""></style>
+<style lang="scss">
+
+
+.main-time {
+  display: flex;
+  justify-content: right;
+  opacity: 0.7;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #131313;
+  text-align: right;
+  line-height: 20px;
+  margin-right: 30px;
+}
+</style>

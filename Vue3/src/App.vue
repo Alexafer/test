@@ -1,15 +1,14 @@
-<template>
-  <div>
-    <Layout />
-  </div>
+<template lang="pug">
+div
+  layout
 </template>
 <script lang="ts">
-import Layout from '@/components/Layout.vue';
+// import Layout from '@/components/Layout.vue';
 import {defineComponent} from 'vue';
 export default defineComponent({
   name: 'App',
   components: {
-    Layout,
+    // Layout,
   },
 });
 </script>

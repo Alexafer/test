@@ -1,7 +1,6 @@
-<template lang="">
-    <div class="container">
-        <h4>History</h4>
-    </div>
+<template lang="pug">
+.container
+  h4 History
 </template>
 <script lang="ts">
 import {defineComponent} from 'vue';
